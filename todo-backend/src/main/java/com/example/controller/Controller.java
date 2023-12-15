@@ -1,8 +1,8 @@
-package com.example.todo.controller;
+package com.example.controller;
 
-import com.example.todo.model.User;
-import com.example.todo.repository.UserRepository;
-import com.example.todo.repository.UserTaskRepository;
+import com.example.model.User;
+import com.example.repository.UserRepository;
+import com.example.repository.UserTaskRepository;
 import jakarta.persistence.EntityManager;
 import jakarta.persistence.PersistenceContext;
 import org.springframework.beans.factory.annotation.Autowired;

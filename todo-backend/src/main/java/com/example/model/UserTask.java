@@ -1,4 +1,4 @@
-package com.example.todo.model;
+package com.example.model;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import jakarta.persistence.*;
@@ -10,14 +10,17 @@ import lombok.NoArgsConstructor;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-@Table(name = "User")
+@Table(name = "User_Task")
 @JsonIgnoreProperties(ignoreUnknown = true)
-public class User {
-
+public class UserTask {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    Integer id;
+    @Column(name = "Task_Id")
+    Integer taskId;
 
-    @Column(name ="name")
-    String name;
+    @Column(name = "User_Id")
+    Integer userId;
+
+    @Column(name = "Task_Name")
+    String taskName;
 }
